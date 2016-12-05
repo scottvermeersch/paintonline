@@ -14,11 +14,40 @@
 	<script type="text/javascript" src="js/jquery.event.drag-2.0.js"></script>
 	<script src="http://localhost:4000/socket.io/socket.io.js"></script>
 	<script type="text/javascript" src="scripts.js"></script>
+	<script src="scripts.js"></script>
+	<script src="server.js"></script>
   </head>
   
   <body>
-  	<canvas id="canvas" width="1000" height="800"></canvas>
-  	<a href="/" class="btn btn-primary" role="button">Return to Menu</a>
+  <div class="container">
+    <div class="vertical-center-row">
+    	<div align="center">
+  		<div id="controls">
+  		<select id="thickness" class="fixed">
+  		<option value="1">1</option>
+  		<option value="2">2</option>
+  		<option value="3">3</option>
+  		<option value="4">4</option>
+  		<option value="5">5</option>
+  		<option value="10">10</option>
+  		<option value="20">20</option>
+  		</select>
+  	
+  		<select id="color" class="fixed">
+  		<option value="#FFFFFF">White</option>
+  		<option value="#AAAAAA">Light Gray</option>
+  		<option value="#666666">Dark Gray</option>
+  		<option value="#000000">Black</option>
+  		<option value="#9BA16C">Tan</option>
+  		<option value="#CC8F2B">Orange</option>
+  		<option value="#63631D">Brown</option>
+  		</select>
+  		<canvas id="canvas" width="1000" height="800"></canvas>
+  		<a href="/" class="btn btn-primary" role="button">Return to Menu</a>
+  		</div>
+    </div>
+    </div>
+    </div>
   	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   	<script type="text/javascript" src="js/jquery.event.drag-2.0.js"></script>
   	<script src="http://localhost:4000/socket.io/socket.io.js"></script>
