@@ -22,20 +22,6 @@ app.use(express.static(__dirname + "/public"));
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 
-var io;
-
-io = require("socket.io").listen(4000);
-
-io.sockets.on("connection", function(socket) {
-  socket.on("drawClick", function(data) {
-    socket.broadcast.emit("draw", {
-      x: data.x,
-      y: data.y,
-      type: data.type
-    });
-  });
-});
-
 // start server on the specified port and binding host
 app.listen(appEnv.port, "0.0.0.0", function() {
   // print a message when the server starts listening
