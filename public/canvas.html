@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+    	body {
+    		background: gray;
+		}
+	</style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
@@ -23,6 +28,7 @@
     <div class="vertical-center-row">
     	<div align="center">
   		<div id="controls">
+  		Size:
   		<select id="thickness" class="fixed">
   		<option value="1">1</option>
   		<option value="2">2</option>
@@ -32,17 +38,24 @@
   		<option value="10">10</option>
   		<option value="20">20</option>
   		</select>
-  	
+  		Color:
   		<select id="color" class="fixed">
-  		<option value="#FFFFFF">White</option>
   		<option value="#AAAAAA">Light Gray</option>
   		<option value="#666666">Dark Gray</option>
   		<option value="#000000">Black</option>
   		<option value="#9BA16C">Tan</option>
   		<option value="#CC8F2B">Orange</option>
   		<option value="#63631D">Brown</option>
+  		<option value="#FFFFFF">Erase</option>
   		</select>
+  		
   		<canvas id="canvas" width="1000" height="800"></canvas>
+  		<script>
+			var canvas = document.getElementById("canvas");
+			var ctx = canvas.getContext("2d");
+			ctx.fillStyle = "white";
+			ctx.fillRect(0,0, canvas.width, canvas.height);
+		</script>
   		<a href="/" class="btn btn-primary" role="button">Return to Menu</a>
   		</div>
     </div>

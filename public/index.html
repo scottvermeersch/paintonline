@@ -16,6 +16,7 @@
 	<script type="text/javascript" src="scripts.js"></script>
 	<script>
   		/*eslint-env jquery */
+  		/*globals loadName */
   		function getLoadName(load) {
   			var $modal = $("editLoadName"), $loadName = $modal.find("#loadName");
   			$loadName.val(load);
@@ -45,8 +46,7 @@
   							</div>
   						</form>
   					<div class="modal-footer">
-  						<input id="load" type="button" class="btn btn-primary" value="load" onclick="getLoadName(this.id);" />
-  						<a href=#load class="btn btn-primary" role="button">Load</a>
+  						<a href="#" onclick="getLoadName(document.getElementById(loadName).value)" class="btn btn-primary" role="button">Load</a>
   						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
   					</div>
   				</div>
